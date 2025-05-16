@@ -97,11 +97,17 @@ def operator_6():
         label.configure(text=text)
 
 
+def clear():
+    global text
+    text = ""
+    label.configure(text="")
+
+
 def result():
     global text
     try:
-        result = eval(text)
-        label.config(text=result)
+        text = str(eval(text))
+        label.config(text=text)
     except:
         pass
 
@@ -116,61 +122,175 @@ root.maxsize(600, 700)
 text = ""
 
 
-label = Label(root, text=text, bg="black", fg="white", font=("Vazir", 20, "bold"))
-label.grid(row=0, column=0, columnspan=5, sticky="nsew")
+label = Label(
+    root,
+    text=text,
+    bg="seagreen2",
+    fg="purple4",
+    font=("Vazir", 20, "bold"),
+    borderwidth=2,
+    relief="solid",
+)
+label.grid(row=0, column=0, columnspan=4, sticky="nsew")
 
 
 button_1 = Button(
-    root, text="1", default="active", command=button_1, font=("Vazir", 15, "bold")
+    root,
+    text="1",
+    default="active",
+    command=button_1,
+    font=("Vazir", 15, "bold"),
+    bg="pale green",
+    activebackground="lightcyan",
 )
 button_2 = Button(
-    root, text="2", default="active", command=button_2, font=("Vazir", 15, "bold")
+    root,
+    text="2",
+    default="active",
+    command=button_2,
+    font=("Vazir", 15, "bold"),
+    bg="pale green",
+    activebackground="lightcyan",
 )
 button_3 = Button(
-    root, text="2", default="active", command=button_3, font=("Vazir", 15, "bold")
+    root,
+    text="3",
+    default="active",
+    command=button_3,
+    font=("Vazir", 15, "bold"),
+    bg="pale green",
+    activebackground="lightcyan",
 )
 
 button_4 = Button(
-    root, text="4", default="active", command=button_4, font=("Vazir", 15, "bold")
+    root,
+    text="4",
+    default="active",
+    command=button_4,
+    font=("Vazir", 15, "bold"),
+    bg="pale green",
+    activebackground="lightcyan",
 )
 button_5 = Button(
-    root, text="5", default="active", command=button_5, font=("Vazir", 15, "bold")
+    root,
+    text="5",
+    default="active",
+    command=button_5,
+    font=("Vazir", 15, "bold"),
+    bg="pale green",
+    activebackground="lightcyan",
 )
 button_6 = Button(
-    root, text="6", default="active", command=button_6, font=("Vazir", 15, "bold")
+    root,
+    text="6",
+    default="active",
+    command=button_6,
+    font=("Vazir", 15, "bold"),
+    bg="pale green",
+    activebackground="lightcyan",
 )
 
 button_7 = Button(
-    root, text="7", default="active", command=button_7, font=("Vazir", 15, "bold")
+    root,
+    text="7",
+    default="active",
+    command=button_7,
+    font=("Vazir", 15, "bold"),
+    bg="pale green",
+    activebackground="lightcyan",
 )
 button_8 = Button(
-    root, text="8", default="active", command=button_8, font=("Vazir", 15, "bold")
+    root,
+    text="8",
+    default="active",
+    command=button_8,
+    font=("Vazir", 15, "bold"),
+    bg="pale green",
+    activebackground="lightcyan",
 )
 button_9 = Button(
-    root, text="9", default="active", command=button_9, font=("Vazir", 15, "bold")
+    root,
+    text="9",
+    default="active",
+    command=button_9,
+    font=("Vazir", 15, "bold"),
+    bg="pale green",
+    activebackground="lightcyan",
 )
 
 operator_1 = Button(
-    root, text="+", default="active", command=operator_1, font=("Vazir", 15, "bold")
+    root,
+    text="+",
+    default="active",
+    command=operator_1,
+    font=("Vazir", 15, "bold"),
+    bg="cyan",
+    activebackground="light blue1",
 )
 operator_2 = Button(
-    root, text="-", default="active", command=operator_2, font=("Vazir", 15, "bold")
+    root,
+    text="-",
+    default="active",
+    command=operator_2,
+    font=("Vazir", 15, "bold"),
+    bg="cyan",
+    activebackground="light blue1",
 )
 operator_3 = Button(
-    root, text="*", default="active", command=operator_3, font=("Vazir", 15, "bold")
+    root,
+    text="*",
+    default="active",
+    command=operator_3,
+    font=("Vazir", 15, "bold"),
+    bg="cyan",
+    activebackground="light blue1",
 )
 operator_4 = Button(
-    root, text="/", default="active", command=operator_4, font=("Vazir", 15, "bold")
+    root,
+    text="/",
+    default="active",
+    command=operator_4,
+    font=("Vazir", 15, "bold"),
+    bg="cyan",
+    activebackground="light blue1",
 )
 operator_5 = Button(
-    root, text="**", default="active", command=operator_5, font=("Vazir", 15, "bold")
+    root,
+    text="**",
+    default="active",
+    command=operator_5,
+    font=("Vazir", 15, "bold"),
+    bg="cyan",
+    activebackground="light blue1",
 )
 operator_6 = Button(
-    root, text="//", default="active", command=operator_6, font=("Vazir", 15, "bold")
+    root,
+    text="//",
+    default="active",
+    command=operator_6,
+    font=("Vazir", 15, "bold"),
+    bg="cyan",
+    activebackground="light blue1",
 )
 
 result = Button(
-    root, text="=", default="active", command=result, font=("Vazir", 15, "bold")
+    root,
+    text="=",
+    default="active",
+    command=result,
+    font=("Vazir", 15, "bold"),
+    bg="lawn green",
+    activebackground="darkseagreen1",
+)
+
+clear = Button(
+    root,
+    text="clear",
+    default="active",
+    command=clear,
+    font=("Vazir", 13, "bold"),
+    bg="greenyellow",
+    activebackground="darkseagreen1",
 )
 
 
@@ -194,6 +314,8 @@ operator_5.grid(row=4, column=1, sticky="nsew")
 operator_6.grid(row=4, column=2, sticky="nsew")
 
 result.grid(row=4, column=3, sticky="nsew")
+
+clear.grid(row=0, column=3, sticky="se")
 
 
 root.grid_columnconfigure(0, weight=1)
